@@ -1,42 +1,55 @@
 # 📄 Intelligent Document Understanding Platform
 
-An AI-powered document question-answering application that allows users to upload PDF documents and ask natural language questions about their content. The platform extracts text, generates embeddings, stores them in a FAISS vector database, retrieves the most relevant context, and uses Google Gemini to provide accurate answers.
+🚀 **Live Demo:** https://intelligent-document-understanding-platform-eettqdhowlcigetke4.streamlit.app/
+
+An AI-powered Document Question Answering application built using **Streamlit**, **Google Gemini**, **Sentence Transformers**, and **FAISS**. The platform allows users to upload PDF documents, ask natural language questions, and receive intelligent, context-aware answers based on the document's content.
 
 ---
 
-## ✨ Features
+## 📌 Overview
+
+The Intelligent Document Understanding Platform simplifies document analysis by enabling users to interact with PDF documents using natural language. Instead of manually searching through lengthy documents, users can simply upload a PDF and ask questions.
+
+The application extracts text from the uploaded document, converts it into semantic embeddings using Sentence Transformers, stores them inside a FAISS vector database, retrieves the most relevant content based on the user's query, and finally uses Google Gemini to generate an accurate and contextual response.
+
+---
+
+# ✨ Features
 
 - 📄 Upload PDF documents
-- 📝 Extract text from PDFs
-- 📊 Display PDF metadata
+- 📝 Extract text from PDF files
+- 📊 Display document metadata
   - File Name
   - File Size
   - Number of Pages
   - Character Count
-- ✂️ Split text into chunks
-- 🧠 Generate embeddings using Sentence Transformers
-- 🗂️ Store embeddings using FAISS
-- 🔍 Retrieve relevant document chunks
-- 🤖 Generate answers using Google Gemini
+- ✂️ Split extracted text into chunks
+- 🧠 Generate semantic embeddings using Sentence Transformers
+- 🗂️ Store embeddings using FAISS Vector Database
+- 🔍 Retrieve the most relevant document chunks
+- 🤖 Generate intelligent answers using Google Gemini
 - 📌 Display retrieved context for transparency
-- ⚠️ Gracefully handle Gemini API errors
+- ⚠️ Gracefully handle API and runtime errors
+- ⚡ Interactive Streamlit interface
 
 ---
 
-## 🛠️ Technologies Used
+# 🛠️ Technologies Used
 
-- Python
-- Streamlit
-- Google Gemini API
-- Sentence Transformers
-- FAISS
-- PyPDF
-- NumPy
-- python-dotenv
+| Technology | Purpose |
+|------------|---------|
+| Python | Programming Language |
+| Streamlit | Web Application Framework |
+| Google Gemini API | Large Language Model |
+| Sentence Transformers | Text Embeddings |
+| FAISS | Vector Database |
+| PyPDF | PDF Text Extraction |
+| NumPy | Numerical Operations |
+| python-dotenv | Environment Variable Management |
 
 ---
 
-## 📁 Project Structure
+# 📂 Project Structure
 
 ```text
 Intelligent-Document-Understanding-Platform/
@@ -47,6 +60,7 @@ Intelligent-Document-Understanding-Platform/
 ├── .env.example
 ├── uploads/
 │   └── .gitkeep
+├── vectorstore/
 └── utils/
     ├── pdf_loader.py
     ├── embeddings.py
@@ -55,65 +69,231 @@ Intelligent-Document-Understanding-Platform/
 
 ---
 
-## 🚀 Installation
+# 📸 Application Screenshots
 
-### 1. Clone the repository
+## 🏠 Home Page
+
+> *(Add screenshot here)*
+
+```markdown
+![Home](assets/home.png)
+```
+
+---
+
+## 📤 Upload PDF
+
+> *(Add screenshot here)*
+
+```markdown
+![Upload](assets/upload.png)
+```
+
+---
+
+## 🤖 AI Generated Answer
+
+> *(Add screenshot here)*
+
+```markdown
+![Result](assets/result.png)
+```
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/bhavanasudhakar29/Intelligent-Document-Understanding-Platform.git
 ```
 
-### 2. Navigate to the project
+---
+
+## 2️⃣ Navigate to the Project
 
 ```bash
 cd Intelligent-Document-Understanding-Platform
 ```
 
-### 3. Install dependencies
+---
+
+## 3️⃣ Create a Virtual Environment (Recommended)
+
+### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+## 4️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Create a `.env` file
+---
+
+## 5️⃣ Configure Environment Variables
+
+Create a `.env` file inside the project root.
 
 ```env
-GOOGLE_API_KEY=YOUR_API_KEY
+GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
 ```
 
-### 5. Run the application
+---
+
+## 6️⃣ Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
+The application will open at:
+
+```
+http://localhost:8501
+```
+
 ---
 
-## 🔄 Workflow
+# 🚀 Live Demo
+
+Try the deployed application here:
+
+### 🌐 https://intelligent-document-understanding-platform-eettqdhowlcigetke4.streamlit.app/
+
+---
+
+# 🔄 Workflow
+
+```text
+             Upload PDF
+                  │
+                  ▼
+         Extract Text from PDF
+                  │
+                  ▼
+        Split Text into Chunks
+                  │
+                  ▼
+Generate Sentence Transformer Embeddings
+                  │
+                  ▼
+ Store Embeddings using FAISS Database
+                  │
+                  ▼
+      User asks a Question
+                  │
+                  ▼
+Retrieve Relevant Document Chunks
+                  │
+                  ▼
+      Google Gemini Generates Answer
+                  │
+                  ▼
+ Display Context-Aware Response
+```
+
+---
+
+# 🧠 How It Works
 
 1. Upload a PDF document.
-2. Extract text from the document.
-3. Split the text into chunks.
-4. Generate embeddings using Sentence Transformers.
-5. Store embeddings in a FAISS vector database.
-6. Ask a question about the document.
+2. Extract all textual content from the document.
+3. Split the extracted text into manageable chunks.
+4. Convert text chunks into vector embeddings.
+5. Store embeddings inside the FAISS vector database.
+6. User submits a natural language question.
 7. Retrieve the most relevant document chunks.
-8. Generate an AI-powered answer using Google Gemini.
+8. Send the retrieved context along with the question to Google Gemini.
+9. Display the AI-generated answer along with the retrieved context.
 
 ---
 
-## 🚀 Future Enhancements
+# 📦 Dependencies
 
-- Support DOCX and TXT files
-- Multi-document search
-- Chat history
-- User authentication
-- Cloud deployment
+```
+streamlit
+google-generativeai
+python-dotenv
+sentence-transformers
+pypdf
+faiss-cpu
+numpy
+```
 
 ---
 
-## 👩‍💻 Author
+# 🚀 Future Enhancements
 
-**Bhavana Sudhakar**
+- 📄 Support DOCX files
+- 📄 Support TXT files
+- 📚 Multi-document search
+- 💬 Chat history
+- 👤 User authentication
+- ☁️ Cloud storage integration
+- 📊 Document summarization
+- 🌍 Multi-language document support
+- 🎤 Voice-based document querying
 
-GitHub: https://github.com/bhavanasudhakar29
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork this repository.
+2. Create a new branch.
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push your branch.
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request.
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 👩‍💻 Author
+
+## **Bhavana Sudhakar**
+
+🎓 B.Tech Artificial Intelligence & Data Science
+
+🔗 GitHub: https://github.com/bhavanasudhakar29
+
+---
+
+# ⭐ If you found this project useful, don't forget to Star the repository!
+
+⭐ **Thank you for visiting this repository!**
