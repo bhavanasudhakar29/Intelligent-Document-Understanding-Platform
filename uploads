@@ -1,12 +1,7 @@
 streamlit
 google-generativeai
-sentence-transformers
-faiss-cpu
-langchain
-langchain-community
 python-dotenv
+sentence-transformers
 pypdf
-python-docx
-Pillow
+faiss-cpu
 numpy
-pandas
