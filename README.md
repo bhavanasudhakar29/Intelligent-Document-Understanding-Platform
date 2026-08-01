@@ -294,6 +294,3 @@ This project is licensed under the **MIT License**.
 
 ---
 
-# ⭐ If you found this project useful, don't forget to Star the repository!
-
-⭐ **Thank you for visiting this repository!**
