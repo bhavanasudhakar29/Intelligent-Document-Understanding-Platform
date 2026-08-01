@@ -1,31 +1,29 @@
 # 📄 Intelligent Document Understanding Platform
 
-## Overview
-
-The Intelligent Document Understanding Platform is an AI-powered application that enables users to upload PDF documents and ask natural language questions about their content. The system extracts text from uploaded PDFs, converts it into embeddings, stores them in a FAISS vector database, retrieves the most relevant information, and uses Google Gemini to generate context-aware answers.
+An AI-powered document question-answering application that allows users to upload PDF documents and ask natural language questions about their content. The platform extracts text, generates embeddings, stores them in a FAISS vector database, retrieves the most relevant context, and uses Google Gemini to provide accurate answers.
 
 ---
 
-## Features
+## ✨ Features
 
-- Upload PDF documents
-- Extract text from PDFs
-- Display PDF metadata
+- 📄 Upload PDF documents
+- 📝 Extract text from PDFs
+- 📊 Display PDF metadata
   - File Name
   - File Size
   - Number of Pages
   - Character Count
-- Split text into chunks
-- Generate embeddings using Sentence Transformers
-- Store embeddings using FAISS
-- Retrieve relevant document chunks
-- Answer questions using Google Gemini 3.5 Flash
-- Display retrieved context for transparency
-- Handle Gemini API errors gracefully
+- ✂️ Split text into chunks
+- 🧠 Generate embeddings using Sentence Transformers
+- 🗂️ Store embeddings using FAISS
+- 🔍 Retrieve relevant document chunks
+- 🤖 Generate answers using Google Gemini
+- 📌 Display retrieved context for transparency
+- ⚠️ Gracefully handle Gemini API errors
 
 ---
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - Python
 - Streamlit
@@ -38,40 +36,52 @@ The Intelligent Document Understanding Platform is an AI-powered application tha
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
-DocumentAI/
+Intelligent-Document-Understanding-Platform/
 │
 ├── app.py
 ├── requirements.txt
 ├── README.md
 ├── .env.example
 ├── uploads/
-├── vectorstore/
+│   └── .gitkeep
 └── utils/
     ├── pdf_loader.py
     ├── embeddings.py
     └── vector_db.py
 ```
 
-## Installation
+---
 
-1. Clone the repository.
+## 🚀 Installation
 
-2. Install dependencies.
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/bhavanasudhakar29/Intelligent-Document-Understanding-Platform.git
+```
+
+### 2. Navigate to the project
+
+```bash
+cd Intelligent-Document-Understanding-Platform
+```
+
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Create a `.env` file.
+### 4. Create a `.env` file
 
-```
+```env
 GOOGLE_API_KEY=YOUR_API_KEY
 ```
 
-4. Run the application.
+### 5. Run the application
 
 ```bash
 streamlit run app.py
@@ -79,20 +89,20 @@ streamlit run app.py
 
 ---
 
-## Workflow
+## 🔄 Workflow
 
-1. Upload a PDF.
-2. Extract document text.
-3. Split text into chunks.
-4. Generate embeddings.
-5. Store embeddings in FAISS.
-6. Enter a question.
-7. Retrieve relevant chunks.
-8. Generate an answer using Gemini.
+1. Upload a PDF document.
+2. Extract text from the document.
+3. Split the text into chunks.
+4. Generate embeddings using Sentence Transformers.
+5. Store embeddings in a FAISS vector database.
+6. Ask a question about the document.
+7. Retrieve the most relevant document chunks.
+8. Generate an AI-powered answer using Google Gemini.
 
 ---
 
-## Future Enhancements
+## 🚀 Future Enhancements
 
 - Support DOCX and TXT files
 - Multi-document search
@@ -102,6 +112,8 @@ streamlit run app.py
 
 ---
 
-## Author
+## 👩‍💻 Author
 
 **Bhavana Sudhakar**
+
+GitHub: https://github.com/bhavanasudhakar29
