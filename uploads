@@ -1,0 +1,12 @@
+streamlit
+google-generativeai
+sentence-transformers
+faiss-cpu
+langchain
+langchain-community
+python-dotenv
+pypdf
+python-docx
+Pillow
+numpy
+pandas
